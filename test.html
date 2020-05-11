@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HtmlGenerator</title>
+    <script src="htmlGenerator.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+
+        new HtmlGenerator([
+            {
+                tag: "div",
+                att: { class: "class-name-1", id: "id-1", hidden: "true" },
+                val: "Value 1",
+                childs: [
+                    { tag: "h1", att: { class: "class-name-1.1" }, val: "Text here..." }
+                ]
+            },
+            {
+                tag: "div",
+                val: "Value 2",
+                att: { class: "class-name-2" },
+                childs: [
+                    {
+                        tag: "div",
+                        att: { class: "class-name-2.1", id: "id-2.1" },
+                        val: "Value 2.1",
+                        childs: [
+                            { tag: "div", att: { class: "class-name-2-1-1" }, val: "Value 2.1.1" }
+                        ]
+                    },
+                ]
+            },
+            {
+                tag: "div",
+                att: { class: "class-name-3" },
+                val: "Value 3"
+            }
+        ], document.body)
+
+    </script>
+
+</body>
+
+</html>
