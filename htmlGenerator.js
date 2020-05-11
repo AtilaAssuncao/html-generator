@@ -45,7 +45,7 @@
 
   init(HtmlGenerator)
 
-  function HtmlGenerator( listObjectDOM = null, parentElement = null ) {
+  function HtmlGenerator( listObjectDOM, parentElement = null ) {
     if (this instanceof HtmlGenerator && listObjectDOM != null){
       this.generate( listObjectDOM, parentElement )
     }
